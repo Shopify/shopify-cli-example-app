@@ -15,9 +15,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - uses: shopify/shopify-cli-action@7c63395e8c064f1d3c19756fb2ea4b3117c34b60
+      # Replace with https://github.com/shopify/shopify-cli-action once it's public
+      - uses: ruby/setup-ruby@v1
         with:
-          command: 'version'
+          ruby-version: 2.7.5
+          bundler-cache: true
+      - name: Install Shopify CLI
+        run: gem install shopify-cli
   build_extension:
     name: Build extension
     runs-on: ubuntu-latest
@@ -26,6 +30,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - uses: shopify/shopify-cli-action@7c63395e8c064f1d3c19756fb2ea4b3117c34b60
+      # Replace with https://github.com/shopify/shopify-cli-action once it's public
+      - uses: ruby/setup-ruby@v1
         with:
-          command: 'version'
+          ruby-version: 2.7.5
+          bundler-cache: true
+      - name: Install Shopify CLI
+        run: gem install shopify-cli
