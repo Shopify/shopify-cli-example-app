@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - uses: shopify/shopify-cli-action@v1
+      - uses: shopify/shopify-cli-action@7c63395e8c064f1d3c19756fb2ea4b3117c34b60
         with:
           command: 'version'
   build_extension:
@@ -26,6 +26,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - uses: shopify/shopify-cli-action@v1
+      - uses: shopify/shopify-cli-action@7c63395e8c064f1d3c19756fb2ea4b3117c34b60
         with:
           command: 'version'
