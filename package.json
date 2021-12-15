@@ -1,5 +1,6 @@
 {
   "name": "shopify-cli-example-app",
+  "private": true,
   "version": "1.0.0",
   "description": "<div align=\"center\">   <img src=\"assets/logo.png\" width=\"150\"/>   <h1>Shopify CLI Example App</h1> </div>",
   "main": "index.js",
