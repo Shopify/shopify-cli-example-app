@@ -1,0 +1,11 @@
+{
+  "version": "1",
+  "title": "payment_method",
+  "description": "Payment methods default script",
+  "configuration": {
+    "type": "single",
+    "schema": [
+
+    ]
+  }
+}
