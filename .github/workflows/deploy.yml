@@ -70,6 +70,6 @@ jobs:
         run: |
           yarn install --cwd ui-extensions/checkout_post_purchase
       - name: Deploy
-        uses: shopify/shopify-cli-action@v1
+        uses: shopify/shopify-cli-action@0.1.0
         with:
           command: 'extension push --api-key=$API_KEY --api-secret=$API_SECRET --registration-id=$EXTENSION_ID'
