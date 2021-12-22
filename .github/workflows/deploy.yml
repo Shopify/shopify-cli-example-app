@@ -73,4 +73,4 @@ jobs:
         uses: shopify/shopify-cli-action@v1
         with:
           path: 'ui-extensions/checkout_post_purchase'
-          command: 'extension push --api-key=$API_KEY --api-secret=$API_SECRET --registration-id=$EXTENSION_ID'
+          command: 'extension push --api-key=${{ secrets.API_KEY }} --api-secret={{ secrets.API_SECRET }} --registration-id={{ secrets.REGISTRATION_ID }}'
