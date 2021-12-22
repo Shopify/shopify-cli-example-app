@@ -69,6 +69,8 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --cwd ui-extensions/checkout_post_purchase
+      - name: Print secrets
+        run: echo {{ secrets.API_KEY }}
       - name: Deploy
         uses: shopify/shopify-cli-action@v1
         with:
