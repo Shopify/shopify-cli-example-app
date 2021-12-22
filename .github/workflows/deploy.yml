@@ -69,10 +69,8 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --cwd ui-extensions/checkout_post_purchase
-      - name: Print command
-        run: echo 'extension push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.REGISTRATION_ID }}'
       - name: Deploy
         uses: shopify/shopify-cli-action@v1
         with:
           path: 'ui-extensions/checkout_post_purchase'
-          command: 'extension push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.REGISTRATION_ID }}'
+          command: 'extension push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }}'
