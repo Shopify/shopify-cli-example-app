@@ -25,7 +25,6 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --cwd scripts/payment_method
-      - uses: shopify/shopify-cli-action@v1
-        with:
-          path: 'scripts/payment_method'
-          command: 'script build'
+      - name: Build
+        working-directory: scripts/payment_method
+        run: yarn run build
