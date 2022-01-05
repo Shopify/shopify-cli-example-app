@@ -40,4 +40,4 @@ jobs:
           yarn install --cwd ui-extensions/checkout_post_purchase
       - name: Build
         working-directory: ui-extensions/checkout_post_purchase
-        run: shopify extension build
+        run: yarn run build
