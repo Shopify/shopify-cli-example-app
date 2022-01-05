@@ -8,6 +8,9 @@ on:
     paths:
       - scripts/payment_method/**
 
+env:
+  NODE_VERSION: "16.13.0"
+
 jobs:
   build:
     name: Build
@@ -16,12 +19,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
-      # Replace with https://github.com/shopify/shopify-cli-action once it's public
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7.5
-          bundler-cache: true
+          node-version: ${{ env.NODE_VERSION }}
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -34,11 +32,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Install Shopify CLI
-        run: gem install shopify-cli
       - name: Install dependencies
         run: |
           yarn install --cwd scripts/payment_method
-      - name: Build
-        working-directory: scripts/payment_method
-        run: shopify script build
+      - uses: shopify/shopify-cli-action@v1
+        with:
+          path: 'scripts/payment_method'
+          command: 'script build'
