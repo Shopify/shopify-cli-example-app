@@ -29,4 +29,4 @@ jobs:
         with:
           path: 'ui-extensions/checkout_post_purchase'
           auth-token: '${{ secrets.CLI_AUTH_TOKEN }}'
-          command: 'extension push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --extension-id=${{ secrets.EXTENSION_ID }}'
+          command: 'extension push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --extension-id=${{ secrets.EXTENSION_ID }} SHOPIFY_CLI_STACKTRACE=1'
