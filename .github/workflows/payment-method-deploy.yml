@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+    paths:
+      - scripts/payment_method/**
+      - .github/workflows/payment-method-deploy.yml
+      
 env:
   NODE_VERSION: "16.13.0"
 
@@ -27,4 +30,4 @@ jobs:
         with:
           path: 'scripts/payment_method'
           auth-token: '${{ secrets.CLI_AUTH_TOKEN }}'
-          command: 'extension push --api-key=${{ secrets.CLI_AUTH_TOKEN }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }}' --force
+          command: 'extension push --api-key=${{ secrets.CLI_AUTH_TOKEN }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }} --force' 

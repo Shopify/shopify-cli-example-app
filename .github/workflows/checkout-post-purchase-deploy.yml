@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ui-extensions/checkout_post_purchase/**
 
 env:
   NODE_VERSION: "16.13.0"
