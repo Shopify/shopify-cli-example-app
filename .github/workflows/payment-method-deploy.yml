@@ -30,4 +30,4 @@ jobs:
         with:
           path: 'scripts/payment_method'
           auth-token: '${{ secrets.CLI_AUTH_TOKEN }}'
-          command: 'extension push --api-key=${{ secrets.CLI_AUTH_TOKEN }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }} --force' 
+          command: 'script push --api-key=${{ secrets.API_KEY }} --api-secret=${{ secrets.API_SECRET }} --uuid=${{ secrets.SCRIPT_UUID }} --force' 
