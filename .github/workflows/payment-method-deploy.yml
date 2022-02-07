@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - scripts/payment_method/**
-      - .github/workflows/payment-method-deploy.yml
 
 env:
   NODE_VERSION: "16.13.0"
