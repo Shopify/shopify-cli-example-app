@@ -25,9 +25,9 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --cwd scripts/payment_method
-      # - name: Deploy
-      #   uses: shopify/shopify-cli-action@v1
-      #   with:
-      #     path: 'scripts/payment_method'
-      #     auth-token: '${{ secrets.CLI_AUTH_TOKEN }}'
-      #     command: 'extension push --api-key=${{ secrets.CLI_AUTH_TOKEN }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }}'
+      - name: Deploy
+        uses: shopify/shopify-cli-action@v1
+        with:
+          path: 'scripts/payment_method'
+          auth-token: '${{ secrets.CLI_AUTH_TOKEN }}'
+          command: 'extension push --api-key=${{ secrets.CLI_AUTH_TOKEN }} --api-secret=${{ secrets.API_SECRET }} --registration-id=${{ secrets.EXTENSION_ID }}' --force
