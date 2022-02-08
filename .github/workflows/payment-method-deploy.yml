@@ -23,8 +23,7 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: 'scripts/payment_method/yarn.lock'
       - name: Install dependencies
-        run: |
-          yarn install --cwd scripts/payment_method
+        run: yarn install --cwd scripts/payment_method
       - name: Deploy
         uses: shopify/shopify-cli-action@v1
         with:
