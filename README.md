@@ -3,7 +3,15 @@
   <h1>Shopify CLI Example App</h1>
 </div>
 
-This repository contains an example Shopify App that uses [shopify/shopify-cli-action](https://github.com/Shopify/shopify-cli-action) to build, test, and deploy an app to the Shopify platform.
+This repository contains an example Shopify App that uses [shopify/shopify-cli-action](https://github.com/Shopify/shopify-cli-action) to build, test, and deploy an app to the Shopify platform using Shopify CLI 2.0.
+
+## CLI Deprecation & Sunset
+
+Note that Shopify CLI 2.0 is deprecated and will be sunset on May 31, 2023. We encourage using [Shopify CLI 3.0](https://github.com/Shopify/cli) to develop apps, custom storefronts, and themes.
+
+Documentation about Shopify CLI 3.0 and CI/CD:
+- https://shopify.dev/apps/tools/cli/ci-cd
+- https://shopify.dev/themes/tools/cli/ci-cd
 
 ## Blocks
 
