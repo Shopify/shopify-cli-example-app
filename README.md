@@ -7,7 +7,7 @@ This repository contains an example Shopify App that uses [shopify/shopify-cli-a
 
 ## CLI Deprecation & Sunset
 
-Note that Shopify CLI 2.0 is deprecated and will be sunset on May 31, 2023. We encourage using [Shopify CLI 3.0](https://github.com/Shopify/cli) to develop apps, custom storefronts, and themes.
+Note that Shopify CLI 2.0 is deprecated. We encourage using [Shopify CLI 3.0](https://github.com/Shopify/cli) to develop apps, custom storefronts, and themes.
 
 Documentation about Shopify CLI 3.0 and CI/CD:
 - https://shopify.dev/apps/tools/cli/ci-cd
